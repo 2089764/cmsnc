@@ -18,22 +18,32 @@ define('CMSNC', true);
 //框架所在目录
 define('SYS_PATH', dirname(__FILE__).DIRECTORY_SEPARATOR);
 
+
 define('INCLUDE_PATH', SYS_PATH.'Include'.DIRECTORY_SEPARATOR);
 
 
+include INCLUDE_PATH.'Import.class.php';
+
+//加载系统函数
+Import::sysFunction('Common');
 
 
 class CmsNc {
-
-
+	
+    /**
+     * 
+     * 初始化应用程序
+     */
 	public static function createApplication(){
+		
+		
+		$db = Import::loadModel('Member');
+		
+		$db->sql();
 
-		 $h = Import::SystemClass('Hello');
-
-		 $h->HelloWorld();	
+		return Import::sysClass('Application');
 	}
 
 }
 
-include INCLUDE_PATH.'Import.class.php';
 CmsNc::createApplication();
