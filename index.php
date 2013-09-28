@@ -9,8 +9,8 @@
  */
 
 
-
-
+define('VERSION','1.0.0');
+ 
 //定义项目路径
 define('APP_PATH',  dirname(__FILE__).DIRECTORY_SEPARATOR.'CmsOS/');
 

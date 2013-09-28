@@ -57,6 +57,25 @@ class Import {
 		return self::_loadClass($classname.'Model', $path, $instantiation);
 	}
 	
+	
+	/**
+	 * 
+	 * 加载模块
+	 * @param string $module           模块 
+	 * @param string $classname        类名
+	 * @param string  $path            导入文件路径
+	 * @param boolean $instantiation   是否实例化
+	 */
+	public static function loadModule($module, $classname, $path ='', $instantiation = TRUE){
+				
+		if(empty($path)) $path = APP_PATH.'Module'.DIRECTORY_SEPARATOR.$module.DIRECTORY_SEPARATOR;
+		
+		if(!is_dir($path)) showMessage('模块路径错误.');
+		
+		return self::_loadClass($classname, $path, $instantiation);
+	}
+	
+	
 
 	/**
 	 * 
@@ -150,7 +169,8 @@ class Import {
 	    if (isset($getArrayFunction[$key])) return true;
 		if (file_exists($path)) {
 			include $path;
-		} else {
+	
+     	} else {
 			$getArrayFunction[$key] = false;
 			return false;
 		}
@@ -160,11 +180,47 @@ class Import {
 	}
 	
 	
+		
+	/**
+	 * 加载配置文件
+	 * @param string $file     配置文件
+	 * @param string $key      要获取的配置荐
+	 * @param string $path     自定义配置文件路径
+	 * @param string $default  默认配置。当获取配置项目失败时该值发生作用。
+	 * @param boolean $reload  强制重新加载。
+	 */
+	public static function loadConfig($file, $key = '', $path='', $default = '', $reload = false) {
+		
+		static $configs = array();
+		
+		if (!$reload && isset($configs[$file])) {
+			if (empty($key)) {
+				return $configs[$file];
+			} elseif (isset($configs[$file][$key])) {
+				return $configs[$file][$key];
+			} else {
+				return $default;
+			}
+		}
 	
-	
-	
-	
-	
-
+    	if(!$path) $path = APP_PATH.'Configs'.DIRECTORY_SEPARATOR;
+		
+		if (file_exists($path)) {
+		
+		    $configs[$file] = include $path.$file.'.config.php';
+		
+		}else{
+		    $path = SYS_PATH.'Configs'.DIRECTORY_SEPARATOR;
+			$configs[$file] = include $path.$file.'.config.php';
+		}
+		
+		if (empty($key)) {
+			return $configs[$file];
+		} elseif (isset($configs[$file][$key])) {
+			return $configs[$file][$key];
+		} else {
+			return $default;
+		}
+	}
 }
 
