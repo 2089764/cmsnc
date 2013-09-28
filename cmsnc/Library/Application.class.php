@@ -13,7 +13,7 @@
 class Application {
 
 	public function sql(){
-         echo "我是基类 的sql";	
+         echo "鎴戞槸鍩虹被 鐨剆ql";	
 	}
 
 }

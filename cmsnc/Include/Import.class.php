@@ -1,6 +1,6 @@
 <?php
 /**
- *  Impotr.class.php     Ìá¹©ÔØÈëÎÄ¼ş&ÊµÀı»¯Àà
+ *  Impotr.class.php     æä¾›è½½å…¥æ–‡ä»¶&å®ä¾‹åŒ–ç±»
  *
  * @author              LuJunJian <CmsSuper@163.com>
  * @copyright			(C) 2012-2013 CMSNC
@@ -15,10 +15,10 @@ class Import {
 	
 	/**
 	 * 
-	 * µ¼ÈëÏµÍ³ÀàÎÄ¼ş
-	 * @param string $classname        ÀàÃû
-	 * @param string  $path            µ¼ÈëÎÄ¼şÂ·¾¶
-	 * @param boolean $instantiation   ÊÇ·ñÊµÀı»¯
+	 * å¯¼å…¥ç³»ç»Ÿç±»æ–‡ä»¶
+	 * @param string $classname        ç±»å
+	 * @param string  $path            å¯¼å…¥æ–‡ä»¶è·¯å¾„
+	 * @param boolean $instantiation   æ˜¯å¦å®ä¾‹åŒ–
 	 */
 	public static function sysClass($classname, $path ='', $instantiation = TRUE){
 		return self::_loadClass($classname, $path, $instantiation);
@@ -27,10 +27,10 @@ class Import {
 	
 	/**
 	 * 
-	 * µ¼ÈëÓ¦ÓÃÀàÎÄ¼ş
-	 * @param string $classname        ÀàÃû
-	 * @param string  $path            µ¼ÈëÎÄ¼şÂ·¾¶
-	 * @param boolean $instantiation   ÊÇ·ñÊµÀı»¯
+	 * å¯¼å…¥åº”ç”¨ç±»æ–‡ä»¶
+	 * @param string $classname        ç±»å
+	 * @param string  $path            å¯¼å…¥æ–‡ä»¶è·¯å¾„
+	 * @param boolean $instantiation   æ˜¯å¦å®ä¾‹åŒ–
 	 */
 	public static function appClass($classname, $path ='', $instantiation = TRUE){
 		
@@ -43,10 +43,10 @@ class Import {
 	
 	/**
 	 * 
-	 * µ¼ÈëÊı¾İ¿âÄ£ĞÍ
-	 * @param string $classname        ÀàÃû
-	 * @param string  $path            µ¼ÈëÎÄ¼şÂ·¾¶
-	 * @param boolean $instantiation   ÊÇ·ñÊµÀı»¯
+	 * å¯¼å…¥æ•°æ®åº“æ¨¡å‹
+	 * @param string $classname        ç±»å
+	 * @param string  $path            å¯¼å…¥æ–‡ä»¶è·¯å¾„
+	 * @param boolean $instantiation   æ˜¯å¦å®ä¾‹åŒ–
 	 */
 	public static function loadModel($classname, $path ='', $instantiation = TRUE){
 		
@@ -60,11 +60,11 @@ class Import {
 
 	/**
 	 * 
-	 * ¼ÓÔØÀàÎÄ¼ş
+	 * åŠ è½½ç±»æ–‡ä»¶
 	 *
-	 * @param string $classname        ÀàÃû
-	 * @param string  $path            µ¼ÈëÎÄ¼şÂ·¾¶
-	 * @param boolean $instantiation   ÊÇ·ñÊµÀı»¯
+	 * @param string $classname        ç±»å
+	 * @param string  $path            å¯¼å…¥æ–‡ä»¶è·¯å¾„
+	 * @param boolean $instantiation   æ˜¯å¦å®ä¾‹åŒ–
 	 */
 	
 	private static function _loadClass($classname, $path, $instantiation = TRUE){
@@ -110,9 +110,9 @@ class Import {
 	
 	/**
 	 * 
-	 * µ¼ÈëÏµÍ³º¯ÊıÎÄ¼ş
-	 * @param staring $fname     º¯ÊıÃû
-	 * @param string $path Â·¾¶
+	 * å¯¼å…¥ç³»ç»Ÿå‡½æ•°æ–‡ä»¶
+	 * @param staring $fname     å‡½æ•°å
+	 * @param string $path è·¯å¾„
 	 */
 	public function sysFunction($fname, $path =''){
 		return self::_loadFunction($fname);
@@ -123,9 +123,9 @@ class Import {
 	
 	/**
 	 * 
-	 * µ¼ÈëÓ¦ÓÃº¯ÊıÎÄ¼ş
-	 * @param staring $fname     º¯ÊıÃû
-	 * @param string $path Â·¾¶
+	 * å¯¼å…¥åº”ç”¨å‡½æ•°æ–‡ä»¶
+	 * @param staring $fname     å‡½æ•°å
+	 * @param string $path è·¯å¾„
 	 */
 	public function appFunction($fname, $path =''){
 		
@@ -136,9 +136,9 @@ class Import {
 
 	/**
 	 * 
-	 * ¼ÓÔØº¯ÊıÎÄ¼ş
-	 * @param staring $fname     º¯ÊıÃû
-	 * @param string $path Â·¾¶
+	 * åŠ è½½å‡½æ•°æ–‡ä»¶
+	 * @param staring $fname     å‡½æ•°å
+	 * @param string $path è·¯å¾„
 	 */	
 	private static function _loadFunction($fname, $path =''){
 	

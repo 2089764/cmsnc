@@ -1,7 +1,7 @@
 <?php
 
 /**
- *  Model.class.php     模型基类
+ *  Model.class.php     妯″瀷鍩虹被
  *
  * @author              LuJunJian <CmsSuper@163.com>
  * @copyright			(C) 2012-2013 CMSNC
@@ -13,7 +13,7 @@
 class Model {
 
 	public function sql(){
-         echo "我是基类 的sql";	
+         echo "鎴戞槸鍩虹被 鐨剆ql";	
 	}
 
 }

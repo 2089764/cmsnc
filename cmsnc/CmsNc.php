@@ -15,7 +15,7 @@ if(version_compare(PHP_VERSION,'5.2.0','<'))  die('require PHP > 5.2.0 !');
 define('CMSNC', true);
 
 
-//¿ò¼ÜËùÔÚÄ¿Â¼
+//æ¡†æ¶æ‰€åœ¨ç›®å½•
 define('SYS_PATH', dirname(__FILE__).DIRECTORY_SEPARATOR);
 
 
@@ -24,7 +24,7 @@ define('INCLUDE_PATH', SYS_PATH.'Include'.DIRECTORY_SEPARATOR);
 
 include INCLUDE_PATH.'Import.class.php';
 
-//¼ÓÔØÏµÍ³º¯Êı
+//åŠ è½½ç³»ç»Ÿå‡½æ•°
 Import::sysFunction('Common');
 
 
@@ -32,7 +32,7 @@ class CmsNc {
 	
     /**
      * 
-     * ³õÊ¼»¯Ó¦ÓÃ³ÌĞò
+     * åˆå§‹åŒ–åº”ç”¨ç¨‹åº
      */
 	public static function createApplication(){
 		

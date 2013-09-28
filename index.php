@@ -11,11 +11,11 @@
 
 
 
-//定义项目路径
+//瀹氫箟椤圭洰璺緞
 define('APP_PATH',  dirname(__FILE__).DIRECTORY_SEPARATOR.'CmsOS/');
 
 
-//导入框架
+//瀵煎叆妗嗘灦
 include './cmsnc/CmsNc.php';
 
 

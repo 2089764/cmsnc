@@ -3,5 +3,5 @@
 
 function helloworld1(){
 
- echo "测试调用应用函数";
+ echo "娴嬭瘯璋冪敤搴旂敤鍑芥暟";
 }
