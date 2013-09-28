@@ -1,7 +1,7 @@
 <?php
 
 /**
- *  Route.class.php     路由
+ *  Route.class.php     路由类
  *
  * @author              LuJunJian <CmsSuper@163.com>
  * @copyright			(C) 2012-2013 CMSNC
@@ -12,11 +12,6 @@
 
 class Route {
 
-  	//$config = Import::loadConfig('Route','default');
-		
-	//	var_dump($config);
-	
-	
 	//路由配置
 	private $route_config = '';
 	private $route_key = array();

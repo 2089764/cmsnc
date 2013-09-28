@@ -1,7 +1,7 @@
 <?php
 
 /**
- *  Application.class.php    
+ *  Application.class.php   应用程序初始化类
  *
  * @author              LuJunJian <CmsSuper@163.com>
  * @copyright			(C) 2012-2013 CMSNC
